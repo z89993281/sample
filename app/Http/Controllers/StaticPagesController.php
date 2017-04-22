@@ -23,4 +23,11 @@ class StaticPagesController extends Controller
   {
     return view('static_pages/about');
   }
+
+  public function test()
+  {
+    var_dump(getenv('IS_IN_HEROKU'));
+    var_dump(parse_url(getenv("DATABASE_URL")));
+    //return view('static_pages/test', $myvar);
+  }
 }
