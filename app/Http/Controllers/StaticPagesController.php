@@ -28,6 +28,7 @@ class StaticPagesController extends Controller
   {
     echo "<pre>";
     var_dump(getenv('IS_IN_HEROKU'));
+    var_dump(getenv('DATABASE_URL'));
     var_dump(parse_url(getenv("DATABASE_URL")));
     //return view('static_pages/test', $myvar);
   }
